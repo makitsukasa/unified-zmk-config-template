@@ -1,0 +1,2 @@
+config SHIELD_XIAO_1KEY
+    def_bool y
