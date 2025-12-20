@@ -17,17 +17,4 @@
 #     cmake-args: -DCONFIG_ZMK_STUDIO=y
 #     artifact-name: corne_left_with_studio
 #
-name: Build ZMK firmware
-
-on:
-  push:
-  pull_request:
-
-jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
-    strategy:
-      matrix:
-        build_matrix:
-          - board: seeeduino_xiao_ble
-            shield: xiao_1key
+---
