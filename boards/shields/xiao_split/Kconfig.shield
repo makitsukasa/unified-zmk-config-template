@@ -1,0 +1,6 @@
+config SHIELD_XIAO_SPLIT_LEFT
+    def_bool $(shields_list_contains,xiao_split_left)
+
+config SHIELD_XIAO_SPLIT_RIGHT
+    def_bool $(shields_list_contains,xiao_split_right)
+

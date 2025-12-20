@@ -1,2 +1,0 @@
-config SHIELD_XIAO_SPLIT_LEFT
-    def_bool y
