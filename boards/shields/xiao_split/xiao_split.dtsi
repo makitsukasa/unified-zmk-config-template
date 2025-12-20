@@ -8,19 +8,29 @@
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
-        columns = <2>; // 全体で2列（左1 + 右1）
-        rows = <1>;
+        columns = <2>; // 論理上の列数（左1列 + 右1列）
+        rows = <1>;    // 論理上の行数
 
-        // 左=0行0列, 右=0行1列 にマッピング
+        // RC(row, col)
+        // 左側＝0行0列、右側＝0行1列 にキーを配置
         map = <
             RC(0,0) RC(0,1)
         >;
     };
 
     kscan0: kscan_0 {
-        compatible = "zmk,kscan-gpio-direct";
-        input-gpios
-            = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // 左側のピン（D0など）
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN";
+        diode-direction = "col2row";
+
+        // 行ピン（入力）: D0を使用
+        row-gpios
+            = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
+
+        // 列ピン（出力）: D1を使用
+        col-gpios
+            = <&xiao_d 1 GPIO_ACTIVE_HIGH>
             ;
     };
 };
