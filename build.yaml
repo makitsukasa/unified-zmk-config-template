@@ -19,4 +19,6 @@
 #
 include:
   - board: seeeduino_xiao_ble
-    shield: xiao_1key
+    shield: xiao_split_left
+  - board: seeeduino_xiao_ble
+    shield: xiao_split_right
