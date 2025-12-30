@@ -46,7 +46,7 @@
                 &kp F7 &kp F8     &kp F9       &kp F10    &kp F11          &kp F12   &trans
 
                 &trans &none  &mmv MOVE_LEFT &mmv MOVE_UP &mmv MOVE_DOWN &mmv MOVE_RIGHT &none
-                &trans &kp C_MUTE &kp VOL_DOWN &kp VOL_UP &kp C_PLAY_PAUSE &kp PSCRN &trans
+                &trans &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &kp PSCRN &trans
 
                 &trans &none  &mkp LCLK      &mkp MCLK    &mkp RCLK      &none           &none
                 &none  &none      &kp DVI      &none      &none            &none     &trans
