@@ -1,0 +1,5 @@
+#include "xiao_split.dtsi"
+
+&default_transform {
+    col-offset = <7>;
+};
