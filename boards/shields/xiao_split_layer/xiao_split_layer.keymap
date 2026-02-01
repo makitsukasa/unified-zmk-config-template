@@ -121,22 +121,6 @@
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
-        morph_dot: morph_dot {
-            compatible = "zmk,behavior-mod-morph";
-            label = "morph_DOT";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp GT>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        morph_slash: morph_slash {
-            compatible = "zmk,behavior-mod-morph";
-            label = "morph_SLASH";
-            #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp QMARK>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
         /* unique ---------------------------------------------------------- */
 
         u_equal: u_equal {
@@ -207,9 +191,9 @@
                 &kp LWIN  &kp Z &kp X &kp C &kp V &kp B &kp N
                     &lt 1 INT5 &mt LSHFT SPACE &mt LCTRL BSPC
 
-                &kp DEL  &kp Y &kp U &kp I     &kp O   &kp P    &kp BSPC
-                &kp LBKT &kp H &kp J &kp K     &kp L   &kp SEMI &kp ENTER
-                &kp RBKT &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RALT
+                &kp DEL     &kp Y &kp U &kp I     &kp O   &kp P       &kp BSPC
+                &morph_lbkt &kp H &kp J &kp K     &kp L   &morph_semi &kp ENTER
+                &morph_rbkt &kp N &kp M &kp COMMA &kp DOT &kp FSLH    &kp RALT
                 &mt RCTRL ENTER &mt RSHFT SPACE &lt 1 INT4
             >;
         };
