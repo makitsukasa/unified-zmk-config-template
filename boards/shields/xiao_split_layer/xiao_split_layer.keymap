@@ -13,9 +13,9 @@
                 &kp LWIN  &kp Z &kp X &kp C &kp V &kp B &kp N
                     &lt 1 INT5 &mt LSHFT SPACE &mt LCTRL BSPC
 
+                &kp DEL  &kp Y &kp U &kp I     &kp O   &kp P    &kp BSPC
                 &kp LBKT &kp H &kp J &kp K     &kp L   &kp SEMI &kp ENTER
                 &kp RBKT &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RALT
-                &kp DEL  &kp Y &kp U &kp I     &kp O   &kp P    &kp BSPC
                 &mt RCTRL ENTER &mt RSHFT SPACE &lt 1 INT4
             >;
         };
