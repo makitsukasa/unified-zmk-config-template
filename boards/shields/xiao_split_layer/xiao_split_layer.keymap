@@ -3,6 +3,200 @@
 #include <dt-bindings/zmk/mouse.h>
 
 / {
+    behaviors {
+
+        /* jis-us numbers -------------------------------------------------- */
+
+        morph_n0: morph_n0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_N0";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp RPAR>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        morph_n1: morph_n1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_N1";
+            #binding-cells = <0>;
+            bindings = <&kp N1>, <&kp EXCL>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        morph_n2: morph_n2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_N2";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp AT>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        morph_n3: morph_n3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_N3";
+            #binding-cells = <0>;
+            bindings = <&kp N3>, <&kp HASH>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        morph_n4: morph_n4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_N4";
+            #binding-cells = <0>;
+            bindings = <&kp N4>, <&kp DLLR>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        morph_n5: morph_n5 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_N5";
+            #binding-cells = <0>;
+            bindings = <&kp N5>, <&kp PRCNT>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        morph_n6: morph_n6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_N6";
+            #binding-cells = <0>;
+            bindings = <&kp N6>, <&kp CARET>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        morph_n7: morph_n7 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_N7";
+            #binding-cells = <0>;
+            bindings = <&kp N7>, <&kp AMPS>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        morph_n8: morph_n8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_N8";
+            #binding-cells = <0>;
+            bindings = <&kp N8>, <&kp ASTRK>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        morph_n9: morph_n9 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_N9";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&kp LPAR>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        /* jis-us symbols -------------------------------------------------- */
+
+        morph_minus: morph_minus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_MINUS";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp UNDER>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        morph_lbkt: morph_lbkt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_LBKT";
+            #binding-cells = <0>;
+            bindings = <&kp AT>, <&kp LBKT>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        morph_rbkt: morph_rbkt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_RBKT";
+            #binding-cells = <0>;
+            bindings = <&kp RBKT>, <&kp BSLH>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        morph_semi: morph_semi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_SEMI";
+            #binding-cells = <0>;
+            bindings = <&kp SEMI>, <&kp COLON>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        morph_dot: morph_dot {
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_DOT";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp GT>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        morph_slash: morph_slash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_SLASH";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp QMARK>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        /* unique ---------------------------------------------------------- */
+
+        u_equal: u_equal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "u_EQUAL";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&kp GRAVE>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        u_plus: u_plus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "u_PLUS";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS>, <&kp TILDE>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        u_fslh: u_fslh {
+            compatible = "zmk,behavior-mod-morph";
+            label = "u_FSLH";
+            #binding-cells = <0>;
+            bindings = <&kp KP_SLASH>, <&kp RPAR>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        u_enter: u_enter {
+            compatible = "zmk,behavior-mod-morph";
+            label = "u_ENTER";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER>, <&kp DQT>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        u_dot: u_dot {
+            compatible = "zmk,behavior-mod-morph";
+            label = "u_DOT";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp SQT>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        u_lpar: u_lpar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "u_LPAR";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp PIPE>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        u_rpar: u_rpar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "u_RPAR";
+            #binding-cells = <0>;
+            bindings = <&kp RPAR>, <&kp BSLH>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -22,9 +216,9 @@
 
         num_layer {
             bindings = <
-                &kp ESC &kp PLUS  &kp N7 &kp N8 &kp N9 &kp FSLH  &kp COLON
-                &trans  &kp EQUAL &kp N4 &kp N5 &kp N6 &kp ENTER &kp LPAR
-                &trans  &kp N0    &kp N1 &kp N2 &kp N3 &kp DOT   &kp RPAR
+                &kp ESC &u_plus   &morph_n7 &morph_n8 &morph_n9 &u_fslh  &kp COLON
+                &trans  &u_equal  &morph_n4 &morph_n5 &morph_n6 &u_enter &u_lpar
+                &trans  &morph_n0 &morph_n1 &morph_n2 &morph_n3 &u_dot   &u_rpar
                     &lt 2 INT5 &trans &trans
 
                 &kp DEL  &trans   &trans    &trans    &trans    &trans &trans
