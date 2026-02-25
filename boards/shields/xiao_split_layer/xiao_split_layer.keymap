@@ -7,7 +7,7 @@
 
         /* ---------------- numbers ---------------- */
 
-        morph_n0: morph_n0 { /* 0 ) (shift-N9) */
+        morph_n0: morph_n0 { /* 0 ) */
             compatible = "zmk,behavior-mod-morph";
             label = "morph_N0";
             #binding-cells = <0>;
@@ -23,7 +23,7 @@
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
-        morph_n2: morph_n2 { /* 2 @ (shift-LBKT) */
+        morph_n2: morph_n2 { /* 2 @ */
             compatible = "zmk,behavior-mod-morph";
             label = "morph_N2";
             #binding-cells = <0>;
@@ -55,7 +55,7 @@
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
-        morph_n6: morph_n6 { /* 6 ^ (shift-EQUAL) */
+        morph_n6: morph_n6 { /* 6 ^ */
             compatible = "zmk,behavior-mod-morph";
             label = "morph_N6";
             #binding-cells = <0>;
@@ -63,7 +63,7 @@
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
-        morph_n7: morph_n7 { /* 7 ^ (shift-N6) */
+        morph_n7: morph_n7 { /* 7 & */
             compatible = "zmk,behavior-mod-morph";
             label = "morph_N7";
             #binding-cells = <0>;
@@ -71,7 +71,7 @@
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
-        morph_n8: morph_n8 { /* 8 * (shift-N6) */
+        morph_n8: morph_n8 { /* 8 * */
             compatible = "zmk,behavior-mod-morph";
             label = "morph_N8";
             #binding-cells = <0>;
@@ -79,7 +79,7 @@
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
-        morph_n9: morph_n9 { /* 0 ((shift-N8) */
+        morph_n9: morph_n9 { /* 9 ( */
             compatible = "zmk,behavior-mod-morph";
             label = "morph_N9";
             #binding-cells = <0>;
@@ -121,14 +121,6 @@
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
-        morph_colon: morph_colon { /* : */
-            compatible = "zmk,behavior-mod-morph";
-            label = "morph_COLON";
-            #binding-cells = <0>;
-            bindings = <&kp APOS>, <&kp APOS>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
         /* ---------------- unique ---------------- */
 
         u_equal: u_equal { /* = ` */
@@ -152,6 +144,14 @@
             label = "u_FSLH";
             #binding-cells = <0>;
             bindings = <&kp FSLH>, <&kp LS(N9)>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        morph_colon: morph_colon { /* : */
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_COLON";
+            #binding-cells = <0>;
+            bindings = <&kp APOS>, <&kp APOS>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
