@@ -5,13 +5,13 @@
 / {
     behaviors {
 
-        /* jis-us numbers -------------------------------------------------- */
+        /* ---------------- numbers ---------------- */
 
-        morph_n0: morph_n0 {
+        morph_n0: morph_n0 { /* 0 ) (shift-N9) */
             compatible = "zmk,behavior-mod-morph";
             label = "morph_N0";
             #binding-cells = <0>;
-            bindings = <&kp N0>, <&kp RPAR>;
+            bindings = <&kp N0>, <&kp N9>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -19,15 +19,15 @@
             compatible = "zmk,behavior-mod-morph";
             label = "morph_N1";
             #binding-cells = <0>;
-            bindings = <&kp N1>, <&kp EXCL>;
+            bindings = <&kp N1>, <&kp N1>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
-        morph_n2: morph_n2 {
+        morph_n2: morph_n2 { /* 2 @ (shift-LBKT) */
             compatible = "zmk,behavior-mod-morph";
             label = "morph_N2";
             #binding-cells = <0>;
-            bindings = <&kp N2>, <&kp AT>;
+            bindings = <&kp N2>, <&kp LBKT>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -35,7 +35,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "morph_N3";
             #binding-cells = <0>;
-            bindings = <&kp N3>, <&kp HASH>;
+            bindings = <&kp N3>, <&kp N3>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -43,7 +43,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "morph_N4";
             #binding-cells = <0>;
-            bindings = <&kp N4>, <&kp DLLR>;
+            bindings = <&kp N4>, <&kp N4>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -51,23 +51,23 @@
             compatible = "zmk,behavior-mod-morph";
             label = "morph_N5";
             #binding-cells = <0>;
-            bindings = <&kp N5>, <&kp PRCNT>;
+            bindings = <&kp N5>, <&kp N5>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
-        morph_n6: morph_n6 {
+        morph_n6: morph_n6 { /* 6 ^ (shift-EQUAL) */
             compatible = "zmk,behavior-mod-morph";
             label = "morph_N6";
             #binding-cells = <0>;
-            bindings = <&kp N6>, <&kp CARET>;
+            bindings = <&kp N6>, <&kp EQUAL>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
-        morph_n7: morph_n7 {
+        morph_n7: morph_n7 { /* 7 & (shift-N6) */
             compatible = "zmk,behavior-mod-morph";
             label = "morph_N7";
             #binding-cells = <0>;
-            bindings = <&kp N7>, <&kp AMPS>;
+            bindings = <&kp N7>, <&kp N6>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -75,25 +75,25 @@
             compatible = "zmk,behavior-mod-morph";
             label = "morph_N8";
             #binding-cells = <0>;
-            bindings = <&kp N8>, <&kp ASTRK>;
+            bindings = <&kp N8>, <&kp N8>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
-        morph_n9: morph_n9 {
+        morph_n9: morph_n9 { /* 0 ((shift-N8) */
             compatible = "zmk,behavior-mod-morph";
             label = "morph_N9";
             #binding-cells = <0>;
-            bindings = <&kp N9>, <&kp LPAR>;
+            bindings = <&kp N9>, <&kp N8>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
-        /* jis-us symbols -------------------------------------------------- */
+        /* ---------------- symbols ---------------- */
 
         morph_minus: morph_minus {
             compatible = "zmk,behavior-mod-morph";
             label = "morph_MINUS";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp UNDER>;
+            bindings = <&kp MINUS>, <&kp MINUS>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -101,7 +101,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "morph_LBKT";
             #binding-cells = <0>;
-            bindings = <&kp LBKT>, <&kp LBRC>;
+            bindings = <&kp LBKT>, <&kp LBKT>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -109,7 +109,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "morph_RBKT";
             #binding-cells = <0>;
-            bindings = <&kp RBKT>, <&kp RBRC>;
+            bindings = <&kp RBKT>, <&kp RBKT>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -117,17 +117,18 @@
             compatible = "zmk,behavior-mod-morph";
             label = "morph_SEMI";
             #binding-cells = <0>;
-            bindings = <&kp SEMI>, <&kp COLON>;
+            bindings = <&kp SEMI>, <&kp SEMI>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
-        /* unique ---------------------------------------------------------- */
+        /* ---------------- unique ---------------- */
 
         u_equal: u_equal {
             compatible = "zmk,behavior-mod-morph";
             label = "u_EQUAL";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&kp GRAVE>;
+            /* JISで + を出すには Shift+; */
+            bindings = <&kp EQUAL>, <&kp SEMI>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -135,7 +136,8 @@
             compatible = "zmk,behavior-mod-morph";
             label = "u_PLUS";
             #binding-cells = <0>;
-            bindings = <&kp PLUS>, <&kp TILDE>;
+            /* + を確実に出す */
+            bindings = <&kp SEMI>, <&kp SEMI>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -143,7 +145,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "u_FSLH";
             #binding-cells = <0>;
-            bindings = <&kp KP_SLASH>, <&kp RPAR>;
+            bindings = <&kp FSLH>, <&kp FSLH>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -151,7 +153,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "u_ENTER";
             #binding-cells = <0>;
-            bindings = <&kp ENTER>, <&kp DQT>;
+            bindings = <&kp ENTER>, <&kp ENTER>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -159,7 +161,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "u_DOT";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp SQT>;
+            bindings = <&kp DOT>, <&kp DOT>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -167,7 +169,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "u_LPAR";
             #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp PIPE>;
+            bindings = <&kp LPAR>, <&kp LPAR>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -175,55 +177,9 @@
             compatible = "zmk,behavior-mod-morph";
             label = "u_RPAR";
             #binding-cells = <0>;
-            bindings = <&kp RPAR>, <&kp BSLH>;
+            bindings = <&kp RPAR>, <&kp RPAR>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
-    };
-
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            bindings = <
-                &kp TAB      &kp Q &kp W &kp E &kp R &kp T &kp Y
-                &morph_minus &kp A &kp S &kp D &kp F &kp G &kp H
-                &kp LWIN     &kp Z &kp X &kp C &kp V &kp B &kp N
-                    &lt 1 INT5 &mt LSHFT SPACE &mt LCTRL BSPC
-
-                &kp DEL     &kp Y &kp U &kp I     &kp O   &kp P       &kp BSPC
-                &morph_lbkt &kp H &kp J &kp K     &kp L   &morph_semi &kp ENTER
-                &morph_rbkt &kp N &kp M &kp COMMA &kp DOT &kp FSLH    &kp RALT
-                &mt RCTRL ENTER &mt RSHFT SPACE &lt 1 INT4
-            >;
-        };
-
-        num_layer {
-            bindings = <
-                &kp ESC &u_plus   &morph_n7 &morph_n8 &morph_n9 &u_fslh  &kp COLON
-                &trans  &u_equal  &morph_n4 &morph_n5 &morph_n6 &u_enter &u_lpar
-                &trans  &morph_n0 &morph_n1 &morph_n2 &morph_n3 &u_dot   &u_rpar
-                    &lt 2 INT5 &trans &trans
-
-                &kp DEL  &trans   &trans    &trans    &trans    &trans &trans
-                &kp LBRC &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &trans &trans
-                &kp RBRC &kp HOME &kp PG_DN &kp PG_UP &kp END   &trans &trans
-                &trans &trans &lt 2 INT4
-            >;
-        };
-
-        fn_layer {
-            bindings = <
-                &trans      &kp F1 &kp F2         &kp F3       &kp F4         &kp F5          &kp F6
-                &trans      &none  &mmv MOVE_LEFT &mmv MOVE_UP &mmv MOVE_DOWN &mmv MOVE_RIGHT &none
-                &bootloader &none  &mkp LCLK      &mkp MCLK    &mkp RCLK      &none           &none
-                    &trans &trans &trans
-
-                &kp F7 &kp F8     &kp F9          &kp F10      &kp F11          &kp F12   &trans
-                &trans &kp C_MUTE &kp C_VOL_DN    &kp C_VOL_UP &kp C_PLAY_PAUSE &kp PSCRN &trans
-                &none  &none      &kp LC(LA(INS)) &none        &none            &none     &bootloader
-                &trans &trans &trans
-            >;
-        };
     };
 };
