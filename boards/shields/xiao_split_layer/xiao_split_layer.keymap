@@ -123,7 +123,7 @@
 
         morph_colon: morph_colon { /* : */
             compatible = "zmk,behavior-mod-morph";
-            label = "morph_SEMI";
+            label = "morph_COLON";
             #binding-cells = <0>;
             bindings = <&kp APOS>, <&kp APOS>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
