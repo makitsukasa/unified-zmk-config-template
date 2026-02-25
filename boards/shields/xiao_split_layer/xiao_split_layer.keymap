@@ -133,7 +133,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "morph_LBRC";
             #binding-cells = <0>;
-            bindings = <&kp APOS>, <&kp APOS>;
+            bindings = <&kp LS(RBKT)>, <&kp LS(RBKT)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -141,7 +141,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "morph_RBRC";
             #binding-cells = <0>;
-            bindings = <&kp APOS>, <&kp APOS>;
+            bindings = <&kp LS(BSLH)>, <&kp LS(BSLH)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
