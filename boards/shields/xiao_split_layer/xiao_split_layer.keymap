@@ -19,7 +19,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "morph_N1";
             #binding-cells = <0>;
-            bindings = <&kp N1>, <&kp LS(N9)>;
+            bindings = <&kp N1>, <&kp LS(N1)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -89,11 +89,11 @@
 
         /* ---------------- symbols ---------------- */
 
-        morph_minus: morph_minus {
+        morph_minus: morph_minus { /* - _ */
             compatible = "zmk,behavior-mod-morph";
             label = "morph_MINUS";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp LS(MINUS)>;
+            bindings = <&kp MINUS>, <&kp LS(BSLH)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -101,7 +101,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "morph_LBKT";
             #binding-cells = <0>;
-            bindings = <&kp AT>, <&kp LS(AT)>;
+            bindings = <&kp RBKT>, <&kp LS(RBKT)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -109,7 +109,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "morph_RBKT";
             #binding-cells = <0>;
-            bindings = <&kp LBKT>, <&kp LS(LBKT)>;
+            bindings = <&kp BSLH>, <&kp LS(BSLH)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -127,7 +127,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "u_EQUAL";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&kp BSLH>;
+            bindings = <&kp CARET>, <&kp LS(LBKT)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -139,11 +139,11 @@
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
-        u_fslh: u_fslh { /* / ? */
+        u_fslh: u_fslh { /* / ) */
             compatible = "zmk,behavior-mod-morph";
             label = "u_FSLH";
             #binding-cells = <0>;
-            bindings = <&kp FSLH>, <&kp LS(FSLH)>;
+            bindings = <&kp FSLH>, <&kp LS(N9)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
