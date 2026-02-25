@@ -121,6 +121,30 @@
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
+        morph_colon: morph_colon { /* : */
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_COLON";
+            #binding-cells = <0>;
+            bindings = <&kp APOS>, <&kp APOS>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        morph_lbrc: morph_lbrc { /* { */
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_LBRC";
+            #binding-cells = <0>;
+            bindings = <&kp APOS>, <&kp APOS>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        morph_rbrc: morph_rbrc { /* } */
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_RBRC";
+            #binding-cells = <0>;
+            bindings = <&kp APOS>, <&kp APOS>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
         /* ---------------- unique ---------------- */
 
         u_equal: u_equal { /* = ` */
@@ -144,14 +168,6 @@
             label = "u_FSLH";
             #binding-cells = <0>;
             bindings = <&kp FSLH>, <&kp LS(N9)>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        morph_colon: morph_colon { /* : */
-            compatible = "zmk,behavior-mod-morph";
-            label = "morph_COLON";
-            #binding-cells = <0>;
-            bindings = <&kp APOS>, <&kp APOS>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -212,9 +228,9 @@
                 &trans  &morph_n0 &morph_n1 &morph_n2 &morph_n3 &u_dot   &u_rpar
                     &lt 2 INT_MUHENKAN &trans &trans
 
-                &kp DEL  &trans   &trans    &trans    &trans    &trans &trans
-                &kp LBRC &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &trans &trans
-                &kp RBRC &kp HOME &kp PG_DN &kp PG_UP &kp END   &trans &trans
+                &kp DEL     &trans   &trans    &trans    &trans    &trans &trans
+                &morph_lbrc &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &trans &trans
+                &morph_rbrc &kp HOME &kp PG_DN &kp PG_UP &kp END   &trans &trans
                 &trans &trans &lt 2 INT_HENKAN
             >;
         };
