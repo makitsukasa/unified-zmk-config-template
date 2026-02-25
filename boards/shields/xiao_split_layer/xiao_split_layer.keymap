@@ -125,7 +125,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "morph_SEMI";
             #binding-cells = <0>;
-            bindings = <&kp APOS>;
+            bindings = <&kp APOS>, <&kp APOS>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
