@@ -180,6 +180,7 @@
             bindings = <&kp RPAR>, <&kp RPAR>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
+    };
 
     keymap {
         compatible = "zmk,keymap";
