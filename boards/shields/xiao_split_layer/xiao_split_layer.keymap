@@ -93,7 +93,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "morph_MINUS";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp LS(BSLH)>;
+            bindings = <&kp MINUS>, <&kp LS(INT_RO)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -121,13 +121,21 @@
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
+        morph_colon: morph_colon { /* : */
+            compatible = "zmk,behavior-mod-morph";
+            label = "morph_SEMI";
+            #binding-cells = <0>;
+            bindings = <&kp APOS>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
         /* ---------------- unique ---------------- */
 
         u_equal: u_equal { /* = ` */
             compatible = "zmk,behavior-mod-morph";
             label = "u_EQUAL";
             #binding-cells = <0>;
-            bindings = <&kp CARET>, <&kp LS(LBKT)>;
+            bindings = <&kp LS(MINUS)>, <&kp LS(LBKT)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -167,7 +175,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "u_LPAR";
             #binding-cells = <0>;
-            bindings = <&kp LS(N8)>, <&kp LS(NON_US_BSLH)>;
+            bindings = <&kp LS(N8)>, <&kp LS(INT_YEN)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -175,7 +183,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "u_RPAR";
             #binding-cells = <0>;
-            bindings = <&kp LS(N9)>, <&kp NON_US_BSLH>;
+            bindings = <&kp LS(N9)>, <&kp INT_YEN>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
     };
@@ -199,7 +207,7 @@
 
         num_layer {
             bindings = <
-                &kp ESC &u_plus   &morph_n7 &morph_n8 &morph_n9 &u_fslh  &kp COLON
+                &kp ESC &u_plus   &morph_n7 &morph_n8 &morph_n9 &u_fslh  &morph_colon
                 &trans  &u_equal  &morph_n4 &morph_n5 &morph_n6 &u_enter &u_lpar
                 &trans  &morph_n0 &morph_n1 &morph_n2 &morph_n3 &u_dot   &u_rpar
                     &lt 2 INT5 &trans &trans
