@@ -202,6 +202,11 @@
             bindings = <&kp LS(N9)>, <&kp INT_YEN>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
+
+        hello: hello {
+            compatible = "zmk,behavior-fixed-typer";
+            #binding-cells = <0>;
+        };
     };
 
     keymap {
@@ -239,12 +244,12 @@
             bindings = <
                 &trans      &kp F1 &kp F2         &kp F3       &kp F4         &kp F5          &kp F6
                 &trans      &none  &mmv MOVE_LEFT &mmv MOVE_UP &mmv MOVE_DOWN &mmv MOVE_RIGHT &none
-                &bootloader &none  &mkp LCLK      &mkp MCLK    &mkp RCLK      &none           &none
+                &bootloader &none  &mkp LCLK      &mkp MCLK    &mkp RCLK      &none           &hello
                     &trans &trans &trans
 
                 &kp F7 &kp F8     &kp F9          &kp F10      &kp F11          &kp F12   &trans
                 &trans &kp C_MUTE &kp C_VOL_DN    &kp C_VOL_UP &kp C_PLAY_PAUSE &kp PSCRN &trans
-                &none  &none      &kp LC(LA(INS)) &kp PSCRN    &none            &none     &bootloader
+                &hello &none      &kp LC(LA(INS)) &kp PSCRN    &none            &none     &bootloader
                 &trans &trans &trans
             >;
         };
