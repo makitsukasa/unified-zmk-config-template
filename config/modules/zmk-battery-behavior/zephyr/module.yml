@@ -1,0 +1,4 @@
+name: zmk-battery-behavior
+build:
+  cmake: .
+  kconfig: Kconfig

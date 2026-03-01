@@ -11,7 +11,6 @@ manifest:
       remote: zmkfirmware
       import: app/west.yml
     - name: zmk-battery-behavior
-      url: https://github.com/makitsukasa/zmk-battery-behavior
-      revision: main
+      path: modules/zmk-battery-behavior
   self:
     path: config

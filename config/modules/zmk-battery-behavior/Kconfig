@@ -1,0 +1,4 @@
+config ZMK_BATTERY_BEHAVIOR
+    bool "Enable battery text behavior"
+    default y
+    depends on ZMK
