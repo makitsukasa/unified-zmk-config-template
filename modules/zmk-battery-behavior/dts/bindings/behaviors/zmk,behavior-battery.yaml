@@ -1,6 +1,4 @@
-title: ZMK battery behavior
-description: |
-  Minimal device tree binding for the custom ZMK battery behavior.
+description: Battery Usage Behavior
 compatible: zmk,behavior-battery
 properties: {}
 additionalProperties: true
