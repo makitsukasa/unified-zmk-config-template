@@ -9,7 +9,6 @@
 
         morph_n0: morph_n0 { /* 0 ) */
             compatible = "zmk,behavior-mod-morph";
-            label = "morph_N0";
             #binding-cells = <0>;
             bindings = <&kp N0>, <&kp LS(N9)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -17,7 +16,6 @@
 
         morph_n1: morph_n1 {
             compatible = "zmk,behavior-mod-morph";
-            label = "morph_N1";
             #binding-cells = <0>;
             bindings = <&kp N1>, <&kp LS(N1)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -25,7 +23,6 @@
 
         morph_n2: morph_n2 { /* 2 @ */
             compatible = "zmk,behavior-mod-morph";
-            label = "morph_N2";
             #binding-cells = <0>;
             bindings = <&kp N2>, <&kp LBKT>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -33,7 +30,6 @@
 
         morph_n3: morph_n3 {
             compatible = "zmk,behavior-mod-morph";
-            label = "morph_N3";
             #binding-cells = <0>;
             bindings = <&kp N3>, <&kp LS(N3)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -41,7 +37,6 @@
 
         morph_n4: morph_n4 {
             compatible = "zmk,behavior-mod-morph";
-            label = "morph_N4";
             #binding-cells = <0>;
             bindings = <&kp N4>, <&kp LS(N4)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -49,7 +44,6 @@
 
         morph_n5: morph_n5 {
             compatible = "zmk,behavior-mod-morph";
-            label = "morph_N5";
             #binding-cells = <0>;
             bindings = <&kp N5>, <&kp LS(N5)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -57,7 +51,6 @@
 
         morph_n6: morph_n6 { /* 6 ^ */
             compatible = "zmk,behavior-mod-morph";
-            label = "morph_N6";
             #binding-cells = <0>;
             bindings = <&kp N6>, <&kp EQUAL>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -65,7 +58,6 @@
 
         morph_n7: morph_n7 { /* 7 & */
             compatible = "zmk,behavior-mod-morph";
-            label = "morph_N7";
             #binding-cells = <0>;
             bindings = <&kp N7>, <&kp LS(N6)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -73,7 +65,6 @@
 
         morph_n8: morph_n8 { /* 8 * */
             compatible = "zmk,behavior-mod-morph";
-            label = "morph_N8";
             #binding-cells = <0>;
             bindings = <&kp N8>, <&kp LS(APOS)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -81,7 +72,6 @@
 
         morph_n9: morph_n9 { /* 9 ( */
             compatible = "zmk,behavior-mod-morph";
-            label = "morph_N9";
             #binding-cells = <0>;
             bindings = <&kp N9>, <&kp LS(N8)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -91,7 +81,6 @@
 
         morph_minus: morph_minus { /* - _ */
             compatible = "zmk,behavior-mod-morph";
-            label = "morph_MINUS";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp LS(INT_RO)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -99,7 +88,6 @@
 
         morph_lbkt: morph_lbkt { /* [ { */
             compatible = "zmk,behavior-mod-morph";
-            label = "morph_LBKT";
             #binding-cells = <0>;
             bindings = <&kp RBKT>, <&kp LS(RBKT)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -107,7 +95,6 @@
 
         morph_rbkt: morph_rbkt { /* ] } */
             compatible = "zmk,behavior-mod-morph";
-            label = "morph_RBKT";
             #binding-cells = <0>;
             bindings = <&kp BSLH>, <&kp LS(BSLH)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -115,7 +102,6 @@
 
         morph_semi: morph_semi { /* ; : */
             compatible = "zmk,behavior-mod-morph";
-            label = "morph_SEMI";
             #binding-cells = <0>;
             bindings = <&kp SEMI>, <&kp APOS>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -123,7 +109,6 @@
 
         morph_colon: morph_colon { /* : */
             compatible = "zmk,behavior-mod-morph";
-            label = "morph_COLON";
             #binding-cells = <0>;
             bindings = <&kp APOS>, <&kp APOS>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -131,7 +116,6 @@
 
         morph_lbrc: morph_lbrc { /* { */
             compatible = "zmk,behavior-mod-morph";
-            label = "morph_LBRC";
             #binding-cells = <0>;
             bindings = <&kp LS(RBKT)>, <&kp LS(RBKT)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -139,7 +123,6 @@
 
         morph_rbrc: morph_rbrc { /* } */
             compatible = "zmk,behavior-mod-morph";
-            label = "morph_RBRC";
             #binding-cells = <0>;
             bindings = <&kp LS(BSLH)>, <&kp LS(BSLH)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -149,7 +132,6 @@
 
         u_equal: u_equal { /* = ` */
             compatible = "zmk,behavior-mod-morph";
-            label = "u_EQUAL";
             #binding-cells = <0>;
             bindings = <&kp LS(MINUS)>, <&kp LS(LBKT)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -157,7 +139,6 @@
 
         u_plus: u_plus { /* + ~ */
             compatible = "zmk,behavior-mod-morph";
-            label = "u_PLUS";
             #binding-cells = <0>;
             bindings = <&kp LS(SEMI)>, <&kp LS(EQUAL)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -165,7 +146,6 @@
 
         u_fslh: u_fslh { /* / ) */
             compatible = "zmk,behavior-mod-morph";
-            label = "u_FSLH";
             #binding-cells = <0>;
             bindings = <&kp FSLH>, <&kp LS(N9)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -173,7 +153,6 @@
 
         u_enter: u_enter { /* ENTER " */
             compatible = "zmk,behavior-mod-morph";
-            label = "u_ENTER";
             #binding-cells = <0>;
             bindings = <&kp ENTER>, <&kp LS(N2)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -181,7 +160,6 @@
 
         u_dot: u_dot { /* . ' */
             compatible = "zmk,behavior-mod-morph";
-            label = "u_DOT";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp LS(N7)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -189,7 +167,6 @@
 
         u_lpar: u_lpar { /* ( | */
             compatible = "zmk,behavior-mod-morph";
-            label = "u_LPAR";
             #binding-cells = <0>;
             bindings = <&kp LS(N8)>, <&kp LS(INT_YEN)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -197,7 +174,6 @@
 
         u_rpar: u_rpar { /* ) \ */
             compatible = "zmk,behavior-mod-morph";
-            label = "u_RPAR";
             #binding-cells = <0>;
             bindings = <&kp LS(N9)>, <&kp INT_YEN>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -207,7 +183,6 @@
 
         battery: battery {
             compatible = "zmk,behavior-battery";
-            label = "BATTERY";
             #binding-cells = <0>;
             bindings = <>;
         };
