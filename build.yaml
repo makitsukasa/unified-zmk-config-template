@@ -20,7 +20,7 @@
 include:
   - board: seeeduino_xiao_ble
     shield: xiao_split_layer_left
-    cmake-args: -DZMK_EXTRA_MODULES=${GITHUB_WORKSPACE}/modules/zmk-battery-behavior
+    cmake-args: -DZMK_EXTRA_MODULES=${GITHUB_WORKSPACE};${GITHUB_WORKSPACE}/modules/zmk-battery-behavior
   - board: seeeduino_xiao_ble
     shield: xiao_split_layer_right
-    cmake-args: -DZMK_EXTRA_MODULES=${GITHUB_WORKSPACE}/modules/zmk-battery-behavior
+    cmake-args: -DZMK_EXTRA_MODULES=${GITHUB_WORKSPACE};${GITHUB_WORKSPACE}/modules/zmk-battery-behavior
