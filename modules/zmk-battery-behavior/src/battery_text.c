@@ -22,27 +22,43 @@ static int behavior_battery_pressed(struct zmk_behavior_binding *binding,
     };
 
     for (int i = 0; i < sizeof(battery_codes) / sizeof(battery_codes[0]); i++) {
-        struct zmk_keycode_state_changed press_event = {
-            .usage_page = HID_USAGE_KEY,
-            .keycode = battery_codes[i],
-            .implicit_modifiers = 0,
-            .explicit_modifiers = 0,
-            .state = true,
-            .timestamp = k_uptime_get(),
+        struct zmk_keycode_state_changed_event press_event = {
+            .data =
+                {
+                    .usage_page = HID_USAGE_KEY,
+                    .keycode = battery_codes[i],
+                    .implicit_modifiers = 0,
+                    .explicit_modifiers = 0,
+                    .state = true,
+                    .timestamp = k_uptime_get(),
+                },
+            .header =
+                {
+                    .event = &zmk_event_zmk_keycode_state_changed,
+                    .last_listener_index = 0,
+                },
         };
-        raise_zmk_keycode_state_changed(press_event);
+        ZMK_EVENT_RAISE(press_event);
 
         k_msleep(10);
 
-        struct zmk_keycode_state_changed release_event = {
-            .usage_page = HID_USAGE_KEY,
-            .keycode = battery_codes[i],
-            .implicit_modifiers = 0,
-            .explicit_modifiers = 0,
-            .state = false,
-            .timestamp = k_uptime_get(),
+        struct zmk_keycode_state_changed_event release_event = {
+            .data =
+                {
+                    .usage_page = HID_USAGE_KEY,
+                    .keycode = battery_codes[i],
+                    .implicit_modifiers = 0,
+                    .explicit_modifiers = 0,
+                    .state = false,
+                    .timestamp = k_uptime_get(),
+                },
+            .header =
+                {
+                    .event = &zmk_event_zmk_keycode_state_changed,
+                    .last_listener_index = 0,
+                },
         };
-        raise_zmk_keycode_state_changed(release_event);
+        ZMK_EVENT_RAISE(release_event);
 
         k_msleep(10);
     }
