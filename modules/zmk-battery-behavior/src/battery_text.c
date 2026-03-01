@@ -95,7 +95,7 @@ static void battery_text_send_decimal(uint8_t value) {
 static void battery_text_send_lr(uint8_t left_soc, uint8_t right_soc) {
     const uint8_t USAGE_L = 0x0F;
     const uint8_t USAGE_R = 0x15;
-    const uint8_t USAGE_SEMI = 0x27;
+    const uint8_t USAGE_SEMI = 0x33;
     const uint8_t USAGE_SPACE = 0x2C;
 
     /* 左（ペリフェラル想定） */
