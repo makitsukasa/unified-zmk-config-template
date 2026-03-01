@@ -1,0 +1,4 @@
+config ZMK_BEHAVIOR_FIXED_TYPER
+    bool "Fixed Typer Behavior"
+    default y
+    depends on ZMK
