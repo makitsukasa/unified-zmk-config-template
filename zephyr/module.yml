@@ -2,5 +2,5 @@ build:
   settings:
     board_root: .
     dts_root: .
-bindings:
-  - ../config/dts/bindings
+  bindings:
+    - ../config/dts/bindings

@@ -2,5 +2,5 @@ name: zmk-battery-behavior
 build:
   cmake: .
   kconfig: Kconfig
-bindings:
-  - dts/bindings
+  bindings:
+    - dts/bindings
