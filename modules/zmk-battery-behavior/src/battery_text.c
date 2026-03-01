@@ -15,12 +15,13 @@ static int behavior_battery_pressed(struct zmk_behavior_binding *binding,
     // 'B'=0x05, 'A'=0x04, 'T'=0x17, 'E'=0x08, 'R'=0x15, 'Y'=0x1C
     // ':'=0x33, '1'=0x1E, '0'=0x27, '%'=0x22
     const uint8_t battery_codes[] = {
-        0x05, 0x04, 0x17, 0x17, 0x08, 0x15, 0x1C,  // BATTERY
-        0x33,                                        // :
-        0x1e, 0x27, 0x27,                           // 100
-        0x22                                         // %
+        0x05, 0x04, 0x17, 0x17, 0x08, 0x15, 0x1C, // BATTERY
+        0x33,                                     // :
+        0x1e, 0x27, 0x27,                         // 100
+        0x22                                      // %
     };
 
+#if !IS_ENABLED(CONFIG_ZMK_SPLIT) || IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
     for (int i = 0; i < sizeof(battery_codes) / sizeof(battery_codes[0]); i++) {
         struct zmk_keycode_state_changed_event press_event = {
             .data =
@@ -62,6 +63,7 @@ static int behavior_battery_pressed(struct zmk_behavior_binding *binding,
 
         k_msleep(10);
     }
+#endif
 
     return ZMK_BEHAVIOR_OPAQUE;
 }
