@@ -1,5 +1,4 @@
 description: Battery Usage Behavior
 compatible: zmk,behavior-battery
 properties: {}
-additionalProperties: true
 required: []
