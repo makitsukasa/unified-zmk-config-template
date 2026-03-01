@@ -10,5 +10,7 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
+    - name: battery_behaviors_module
+      path: config/modules/battery-behaviors
   self:
     path: config

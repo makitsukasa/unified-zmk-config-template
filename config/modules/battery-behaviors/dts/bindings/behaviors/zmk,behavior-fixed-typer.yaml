@@ -1,3 +1,4 @@
 description: "Fixed Typer Behavior"
 compatible: "zmk,behavior-fixed-typer"
-binding-cells: <0>
+binding-cells:
+  - 0
