@@ -208,6 +208,7 @@
         battery: battery {
             compatible = "zmk,behavior-battery";
             label = "BATTERY";
+            #binding-cells = <0>;
         };
     };
 
