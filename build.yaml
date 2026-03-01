@@ -20,5 +20,7 @@
 include:
   - board: seeeduino_xiao_ble
     shield: xiao_split_layer_left
+    cmake-args: -DZMK_EXTRA_MODULES="/__w/unified-zmk-config-template/unified-zmk-config-template/config/modules/battery-behaviors"
   - board: seeeduino_xiao_ble
     shield: xiao_split_layer_right
+    cmake-args: -DZMK_EXTRA_MODULES="/__w/unified-zmk-config-template/unified-zmk-config-template/config/modules/battery-behaviors"
