@@ -3,23 +3,5 @@ name: Build ZMK firmware
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  dump-behavior-header:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Dump remote zmk behavior.h (first 240 lines)
-        run: |
-          echo "----- remote behavior.h -----"
-          curl -fsSL https://raw.githubusercontent.com/zmkfirmware/zmk/main/app/include/zmk/behavior.h \
-            | sed -n '1,240p' || true
-
-      - name: Search for ZMK_BEHAVIOR_DEFINE in repo
-        run: |
-          echo "----- grep in repo -----"
-          grep -nR "ZMK_BEHAVIOR_DEFINE" . || true
-
   build:
-    needs: dump-behavior-header
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
